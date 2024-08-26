@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="129px" height="72px" viewBox="0 0 129 72" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>手机号或邮箱账号登录</title>
+    <desc>Created with Sketch.</desc>
+    <g id="登录" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="2-3-1-选择登录方式" transform="translate(-861.000000, -403.000000)">
+            <g id="编组-2" transform="translate(440.000000, 278.000000)">
+                <g id="编组-13" transform="translate(43.000000, 36.000000)">
+                    <g id="编组-9" transform="translate(0.000000, 89.000000)">
+                        <g id="编组-12" transform="translate(373.000000, 0.000000)">
+                            <g id="手机号或邮箱账号登录" transform="translate(5.000000, 0.000000)">
+                                <circle id="椭圆形备份-9" stroke="#EE9700" stroke-width="2" cx="93" cy="36" r="35"></circle>
+                                <g id="编组-14" transform="translate(75.000000, 22.000000)">
+                                    <g id="编组-15">
+                                        <rect id="矩形" fill="#EE9700" x="0" y="0" width="39" height="28" rx="4"></rect>
+                                        <polyline id="路径-2" stroke="#FFFFFF" points="0 28 14 12.5 19.5 17 39.5 0"></polyline>
+                                        <polyline id="路径-3" stroke="#FFFFFF" points="39 28 25.5 12 19.5 17 0 0.5"></polyline>
+                                    </g>
+                                </g>
+                                <circle id="椭圆形备份-4" stroke="#EE9700" stroke-width="2" fill="#FFFFFF" cx="36" cy="36" r="35"></circle>
+                                <g id="编组" transform="translate(23.000000, 17.000000)" fill="#EE9700">
+                                    <path d="M0,4 L0,35 C2.705415e-16,37.209139 1.790861,39 4,39 L22,39 C24.209139,39 26,37.209139 26,35 L26,4 C26,1.790861 24.209139,-1.73807988e-15 22,0 L4,0 C1.790861,4.05812251e-16 -2.705415e-16,1.790861 0,4 Z M10,34.5 C10,33.1159487 11.117851,32 12.5,32 C13.882149,32 15,33.1159487 15,34.4977085 C15,35.8817599 13.882149,37 12.5,37 C11.117851,37 10,35.8817599 10,34.5 Z" id="形状" fill-rule="nonzero"></path>
+                                    <rect id="矩形" stroke="#FFFFFF" x="4.5" y="5.5" width="17" height="23" rx="2"></rect>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

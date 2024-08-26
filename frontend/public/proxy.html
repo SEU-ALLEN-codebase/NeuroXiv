@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>login</title>
+  <script type="text/javascript" src="https://connect.qq.com/qc_jssdk.js" data-appid="<%= htmlWebpackPlugin.options.appId %>" charset="utf-8"></script>
+</head>
+<body>
+<script>
+  let openIdPromise = new Promise(resolve => {
+    QC.Login.getMe(openId => resolve(openId))
+  })
+  let userInfoPromise = new Promise((resolve, reject) => {
+        QC.api('get_user_info').success(info => {
+              if (info.code === 0 && info.data.ret === 0) {
+                resolve({
+                  nickname: info.data.nickname,
+                  avatar: info.data.figureurl_qq_1
+                })
+              } else {
+                reject(new Error(info.msg))
+              }
+            }
+        )
+      }
+  )
+  Promise.all([openIdPromise, userInfoPromise]).then(([openId, userInfo]) => {
+        (window.opener || top).postMessage({
+          code: 0,
+          source: 'login-proxy',
+          data: {
+            openId,
+            ...userInfo
+          }
+        }, location.origin)
+      }
+  ).catch(e => {
+        (window.opener || top).postMessage({
+          code: 1,
+          source: 'login-proxy',
+          msg: e.message
+        }, location.origin)
+      }
+  ).finally(() => {
+        if (window.opener) {
+          window.close()
+        }
+      }
+  )
+</script>
+</body>
+</html>

@@ -1,0 +1,5 @@
+{
+  "API_PATH": "/api",
+  "QQ_LOGIN_APP_ID": 101559904,
+  "QQ_LOGIN_REDIRECT_URL": "/proxy.html"
+}

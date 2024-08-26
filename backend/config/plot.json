@@ -1,0 +1,9 @@
+{
+    "proj_plot": {
+        "celltype_list": [
+            "ACAd", "ACAv", "AId", "AIv", "FRP", "ILA", "MOp", "MOs", "ORBl", "ORBm", "ORBvl", "PL", "RSPv", "SSp-bfd", "SSp-ll", "SSp-m", "SSp-n", "SSp-ul", "SSs", "VISl", "VISp", "CA1", "CA2", "CA3", "DG", "HATA", "PAR", "POST", "PRE", "ProS", "SUB", "CLA", "CP", "OT", "LD", "LGd", "LP", "MD", "MG", "PO", "RT", "VAL", "VM", "VPL", "VPLpc", "VPM", "LHA", "ZI"
+        ],
+        "arbor_target_region_list":[
+            "L1", "L2/3", "L4", "L5", "L6a", "L6b", "ACAd", "ACAv", "AId", "AIv", "AUDp", "FRP", "MOp", "MOs", "ORBl", "ORBm", "ORBvl", "PL", "RSPagl", "RSPd", "RSPv", "SSp-bfd", "SSp-ll", "SSp-m", "SSp-n", "SSp-ul", "SSs", "VISC", "VISa", "VISam", "VISp", "VISrl", "CA1", "CA3", "DG", "ENTl", "ENTm", "PAR", "ProS", "SUB", "AON", "COAp", "PIR", "TR", "BLA", "ACB", "CP", "LSr", "OT", "SI", "AM", "MD", "VM", "VPM", "AHN", "LHA", "MM", "CS", "PCG", "PG", "PRNr", "MDRN", "PARN", "MRN", "PAG", "SCm", "fiber tracts"]
+    }
+}

@@ -1,0 +1,23 @@
+// 文字省略号
+.text-ellipsis {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: inline-block;
+}
+
+// 多行文字省略号(Firefox 也是支持的！)
+.multiple-lines-ellipsis {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+// 禁用状态
+.disabled {
+  pointer-events: none;
+  filter: grayscale(.5);
+  opacity: .5;
+}

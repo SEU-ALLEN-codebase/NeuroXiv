@@ -1,0 +1,37 @@
+// elementUI 一些样式调整, 跟主题颜色无关, 例如导航菜单的缩进等, 这些调整是全局通用的
+
+// loading
+.el-loading-spinner {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  background-color: fade(white, 60);
+  font-weight: bold;
+  width: 100px;
+  border-radius: 5px;
+  padding: 10px;
+  left: 50%;
+  margin-left: -50px;
+  margin-top: -47px;
+  .el-loading-text {
+    white-space: nowrap;
+  }
+}
+
+// primary button 添加背景渐变
+.el-button--primary {
+  // background-image: var(--rect-gradient);
+  // border: 0;
+}
+
+// 调整 el-tabs 样式, 高度铺满
+.el-tabs.full-height {
+  display: flex;
+  flex-flow: column nowrap;
+  > .el-tabs__content {
+    height: 0;
+    flex: 1 1 auto;
+    .el-tab-pane {
+      height: 100%;
+    }
+  }
+}

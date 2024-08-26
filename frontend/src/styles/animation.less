@@ -1,0 +1,132 @@
+/* 常用的动画样式 */
+
+// rotate
+@keyframes rotate {
+  100% {
+    transform: rotate(1turn);
+  }
+}
+.rotate-animation {
+  animation: rotate 3s linear 1;
+}
+
+// logo 放大之后旋转的动画效果
+@keyframes scale-rotate {
+  0%, 10%, 12% {
+    transform: scale(1) rotate(0deg);
+  }
+  5% {
+    transform: scale(2) rotate(0deg);
+  }
+  30%, 100% {
+    transform: scale(1) rotate(3turn);
+  }
+}
+.scale-rotate-animation {
+  animation: scale-rotate 10s cubic-bezier(0.25, 0.46, 0.45, 0.94) infinite;
+}
+
+// element UI loading svg 动画
+// 需要添加的 svg 标签
+// <div class="loading-spinner">
+//    <svg viewBox="0 0 50 50" class="circular">
+//      <circle cx="25" cy="25" r="20" fill="none" class="path"></circle>
+//    </svg>
+// </div>
+@keyframes loading-dash {
+  0% {
+    stroke-dasharray: 1,200;
+    stroke-dashoffset: 0;
+  }
+  50% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -40;
+  }
+  100% {
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: -125;
+  }
+}
+.loading-spinner {
+  height: 42px;
+  width: 42px;
+  animation: rotate 2s linear infinite;
+  .path {
+    animation: loading-dash 1.5s ease-in-out infinite;
+    stroke-dasharray: 90,150;
+    stroke-dashoffset: 0;
+    stroke-width: 2;
+    stroke: #409eff;
+    stroke-linecap: round;
+  }
+}
+
+// ##########
+// 脉冲动画 pulse
+// ##########
+// 使用 after + transform 实现的方式添加的缩放动画
+@keyframes transform-pulse-scale {
+  0%, 100% { transform: scale(0.95); }
+  70% { transform: scale(1); }
+}
+@keyframes transform-pulse-scale2 {
+  0% {
+    transform: scale(1);
+    opacity: .7;
+  }
+  70% {
+    transform: scale(2);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0;
+  }
+}
+// 使用 box-shadow 实现的脉冲效果添加的动画
+@keyframes shadow-pulse-scale {
+  0% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 var(--shadow-pulse-color);
+  }
+  70% {
+    transform: scale(1);
+    box-shadow: 0 0 0 calc(var(--width) / 2) transparent;
+  }
+  100% {
+    transform: scale(0.95);
+    box-shadow: 0 0 0 0 transparent;
+  }
+}
+
+.pulse-animation {
+  // 因为 css color module 5 还没实现, 不能使用原生的颜色函数, 所以这里需要定义不同的变量
+  --width: 20px;
+  --height: 20px;
+  --shadow-pulse-color: rgba(52, 172, 224, 0.7); // 通过阴影实现的脉冲动画要设置的阴影颜色
+  --transform-pulse-color: rgb(117, 206, 245); // 通过 after + transform 实现的脉冲动画颜色
+  background-color: rgba(52, 172, 224, 1);
+  width: var(--width);
+  height: var(--height);
+  border-radius: 50%;
+  position: relative;
+  // 默认使用 after 元素 transform + opacity 实现脉冲效果, 性能更好, 刚开始的时候会有一种 "抖动一下" 的效果
+  &:not(.shadow-pulse) {
+    animation: transform-pulse-scale 2s infinite;
+    &:after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0;
+      top: 0;
+      border-radius: 50%;
+      background-color: var(--transform-pulse-color);
+      animation: transform-pulse-scale2 2s infinite;
+    }
+  }
+  &.shadow-pulse {
+    // 通过阴影实现的脉冲动画, 性能差一点, 并且没有 "抖动一下才开始脉冲" 的效果
+    animation: shadow-pulse-scale 2s infinite;
+  }
+}
